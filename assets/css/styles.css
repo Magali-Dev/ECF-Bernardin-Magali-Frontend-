@@ -33,7 +33,6 @@ header {
     width: 100%;
     background-color: rgba(140, 101, 16, 0.8); /* corrigé syntaxe rgba */
     color: #e1dada;
-    flex-wrap: wrap;
 }
 
 .logo-container {
@@ -187,7 +186,6 @@ main {
     font-style: italic;
     color: #411501;
 }
-
 /* Cartes */
 .cards-grid {
     display: grid;
@@ -198,7 +196,6 @@ main {
     max-width: 1400px;
     margin: 3rem auto;
 }
-
 .zodiac-card {
     background-image: url("../images/fond-horoscope.png");
     opacity: 0.9;
@@ -213,7 +210,6 @@ main {
     width: 250px;
     transition: transform 0.10s ease, box-shadow 0.10s ease;
 }
-
 .zodiac-card:hover {
     transform: scale(1.03);
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
@@ -224,7 +220,6 @@ main {
     flex-direction: column;
     align-items: center;
 }
-
 .zodiac-header img {
     width: 120px;
     height: 120px;
@@ -234,22 +229,18 @@ main {
     display: block;
     border: 3px solid white;
 }
-
 .zodiac-header h2 {
     font-size: 1.5rem;
     margin-bottom: 10px;
     font-family: "Montserrat Alternates", sans-serif;
 }
-
 .zodiac-dates {
     font-weight: bold;
     color: #101010;
 }
-
 .zodiac-horoscope {
     margin-top: 0.5rem;
 }
-
 /* Footer */
 footer {
     background-color: rgba(8, 5, 2, 0.8);
@@ -270,7 +261,6 @@ footer {
   color: #eb6d05;
   
 }
-
 /* Modal */
 .modal {
     display: none;
@@ -288,7 +278,7 @@ footer {
     margin: 5% auto;
     padding: 20px;
     border: 1px solid #888;
-    width: 80%;
+    width: 90%;
     max-width: 600px;
     border-radius: 8px;
     box-shadow: 5px 5px 5px black;
@@ -299,6 +289,7 @@ footer {
     margin-bottom: 30px;
     font-family: "Fredericka the Great", serif;
     font-weight: 500;
+    font-size: 20px;
 }
 .modal-content p {
     margin-bottom: 15px;
@@ -309,11 +300,12 @@ footer {
 }
 .close-btn {
     color: #e2ba08;
-    padding: 5px;
+    width: 2rem;
     float: right;
     font-size: 28px;
     font-weight: bold;
     background-color: #411501;
+   
 }
 
 .close-btn:hover,
@@ -322,7 +314,6 @@ footer {
     text-decoration: none;
     cursor: pointer;
 }
-
 /* Media Queries */
 @media (max-width: 768px) {
     .logo-container h1 {
@@ -348,8 +339,15 @@ footer {
         font-size: 1.2rem;
     }
 }
-
 @media (max-width: 450px) {
+    .logo-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+       
+        
+    }
     .logo-container h1 {
         font-size: 2rem;
         text-align: center;
@@ -361,4 +359,5 @@ footer {
     footer {
         font-size: 1rem;
     }
+    
 }
