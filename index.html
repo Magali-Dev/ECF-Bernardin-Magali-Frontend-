@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Horoscope Oracle</title>
+  <meta name="description" content="Horoscope Oracle du Jour – Une application responsive développée par Magali Bernardin-Bichet, en formation AFPA. Tirez vos 12 cartes, découvrez votre horoscope avec animations et loader.">
+  <meta name="author" content="Magali Bernardin-Bichet">
+  <meta name="robots" content="index, follow">
+  <meta property="og:title" content="Horoscope Oracle – Magali Bernardin‑Bichet">
+  <meta property="og:description" content="Tirez vos 12 cartes et découvrez votre horoscope du jour avec animations.">
+  <meta property="og:image" content="url-de-l’image‑partage.jpg">
+  <meta name="keywords" content="horoscope, oracle, tarot, astre">
+  <link rel="preload" href="./assets/css/styles.css" as="style">
+  <link rel="stylesheet" href="./assets/css/styles.css">
+  <link rel="shortcut icon" href="./assets/images/astrologie.png" type="image/x-icon">
+</head>
+<body>
+  <video autoplay muted loop aria-hidden="true" tabindex="-1"  aria-label="Vidéo de fond décorative, sans information essentielle"id="background-video">
+    <source src="./assets/video/astrologie.mp4"  type="video/mp4" alt="">
+  </video>
+
+  <header>
+    <div class="logo-container">
+      <img src="./assets/images/image-fond2.png" alt="Logo Zodiaque" class="logo">
+      <h1>Horoscope Oracle</h1>
+    </div>
+    <div class="date-container">
+        <time id="current-date" datetime="" class="date-header"></time>
+    </div>
+  </header>
+  <section id="bouton-section">
+    <button id="tirer-cartes">🔮 Tirez les 12 cartes</button>
+    <p id="loading-message" role="status" aria-live="polite" class="loadingChargement" style="display: none;">⏳ Chargement des cartes encours</p>
+  </section>
+  <main>
+   <section id="intro-text">
+        <h1>Bienvenue dans Horoscope Oracle 🌙</h1>
+        <p>Je suis <strong>Magali Bernardin-Bichet</strong>, en formation Développeur Web & Web Mobile à l’AFPA de Châtellerault.</p>
+        <p>Cette application est le fruit de mon <em>ECF-1 Front-End</em>, réalisée pour valider mes compétences en développement web.</p>
+
+        <h2>Fonctionnalités principales</h2>
+        <ul>
+            <li>Interface responsive et animations légères</li>
+            <li>Bouton «Tirer les 12 messages» avec appel API sécurisé</li>
+            <li>Affichage dynamique des messages sous forme de cartes interactives</li>
+            <li>Loader visible pendant le chargement</li>
+            <li>Message d’erreur clair en cas de problème de connexion</li>
+        </ul>
+
+        <h2>Technologies utilisées</h2>
+        <ul>
+            <li>HTML5 sémantique</li>
+            <li>CSS3 moderne (grid, flexbox, media queries, animations hover)</li>
+            <li>JavaScript natif : fetch() POST JSON, manipulation DOM (createElement, appendChild, innerHTML)</li>
+        </ul>
+
+        <p>Ce projet démontre mes compétences en structuration de code, responsive design, intégration API et UX</p>
+        <p>Merci de découvrir <strong>Horoscope Oracle</strong>, et que chaque message vous apporte inspiration et sérénité.</p>
+    </section>
+    <section id="cards-container" class="cards-grid" style="display: none;"></section>
+  </main>
+  <footer>
+    <p>&copy; 2025 Horoscope Oracle - Réalisé par Magali Bernardin-Bichet</p>
+    <p><a href="#" id="open-mentions">Mentions légales & RGPD</a></p>
+  </footer>
+
+  <aside id="modal-mentions" class="modal" aria-hidden="true">
+    <div class="modal-content" role="dialog" aria-modal="true" aria-labelledby="mentions-title">
+      <button class="close-btn" aria-label="Fermer">&times;</button>
+      <h2 id="mentions-title">Mentions légales & RGPD</h2>
+        <p><strong>Responsable du traitement :</strong> Magali Bernardin-Bichet</p>
+        <p><strong>Adresse :</strong> AFPA de Châtellerault, France</p>
+        <p><strong>Contact :</strong> <a href="mailto:magali@example.com">magali@example.com</a></p>
+        <p><strong>Finalité du traitement :</strong> Fournir des horoscopes personnalisés via une API externe.</p>
+        <p><strong>Base légale du traitement :</strong> Consentement de l'utilisateur.</p>
+        <p><strong>Destinataires des données :</strong> Les données ne sont pas transmises à des tiers.</p>
+        <p><strong>Durée de conservation :</strong> Les données sont conservées pendant la durée de la session.</p>
+        <p><strong>Droits des utilisateurs :</strong> Accès, rectification, suppression, limitation du traitement, portabilité des données, droit d'opposition. Pour exercer ces droits, contactez le responsable du traitement.</p>
+        <p><strong>Cookies :</strong> Ce site utilise des cookies pour améliorer l'expérience utilisateur. En poursuivant votre navigation, vous acceptez leur utilisation.</p>
+        <p><strong>Hébergeur :</strong> WebHosting Inc. – 123 Rue Imaginaire, 75000 Paris, France – Tél : +33 1 23 45 67 89</p>
+        <p><strong>Directeur de la publication :</strong> Magali Bernardin-Bichet</p>
+    </div>
+ </aside>
+    <script src="./assets/js/script.js"></script>
+</body>
+</html>
+
+ 
