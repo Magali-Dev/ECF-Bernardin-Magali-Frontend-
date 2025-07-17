@@ -1,23 +1,31 @@
-# Dépendances front-end
-node_modules/
+# fichier .gitignore
 
-# Fichiers de build ou de sortie
-dist/
-build/
+# Propreté du dépôt : seuls les fichiers réellement importants sont versionnés.
 
-# Caches, logs, fichiers temporaires
-*.log
-*.tmp
-.cache/
+# Sécurité : empêche la publication accidentelle de clés, logs, etc.
 
-# Fichiers de configuration locale ou sensibles
+# Performance : Git n’indexe pas les fichiers inutiles, ce qui accélère les commandes.
+
+
+
+# Secrets (ex. API keys si présents)
 .env
 
-# Fichiers système et IDE
+# Fichiers log ou temporaires
+*.log
+logs/
+tmp/
+temp/
+.cache/
+
+# Fichiers système
 .DS_Store
 Thumbs.db
-.vscode/
-.idea/
 
-# Fichiers temporaires génériques
+# Sauvegardes/temporaires d'éditeurs
 *~
+*.swp
+
+# VS Code
+.vscode/
+
