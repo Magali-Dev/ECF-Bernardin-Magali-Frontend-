@@ -144,6 +144,21 @@ window.onclick = (event) => {
 };
 
 
+// bouton vers le haut 
+
+const btnRetour = document.getElementById('back-to-top');
+const showAfter = 200;
+
+window.addEventListener('scroll', () => {
+  if (window.scrollY > showAfter) btnRetour.classList.add('show');
+  else btnRetour.classList.remove('show');
+});
+
+btnRetour.addEventListener('click', () => {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+  // Ramène le focus sur le bouton pour les utilisateurs clavier
+  btnRetour.focus({ preventScroll: true });
+});
 
 
 

@@ -256,6 +256,35 @@ footer {
   color: #eb6d05;
   
 }
+/* retour vers le haut */
+
+#back-to-top {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  background: var(--btn-bg, rgba(0,0,0,0.6));
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 3rem;
+  height: 3rem;
+  font-size: 1.5rem;
+  cursor: pointer;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s;
+  z-index: 1000;
+}
+#back-to-top.show {
+  opacity: 1;
+  visibility: visible;
+}
+#back-to-top:hover,
+#back-to-top:focus {
+  background: var(--btn-bg-hover, rgba(0,0,0,0.8));
+  outline: 2px solid #fff;
+}
+
 /* Modal */
 .modal {
     display: none;

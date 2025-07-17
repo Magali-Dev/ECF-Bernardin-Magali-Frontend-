@@ -73,26 +73,21 @@ ECF-Bernardin-Magali(Frontend)/
 ## Adresse du site web ##
  https://ecf1-bernardin-bichet-magali.sidathsoeun.fr
 
+
+## Lien vers le dépôt GitHub (public)##
+https://github.com/Magali-Dev/ECF-Bernardin-Magali-Frontend-.git
+
 ---
-
-
 ## 📡 Fonctionnement de l'interface publique (`index.html`)
 
-- 🎥 **Fond horoscope** avec ambiance rétro-futuriste (`astrologie.mp4`).
-- 🟠 **Bouton interactif** :  
-  Un bouton « Tirer les 12 messages » déclenche l'affichage des horoscopes.
-- 🔐 **Appel API sécurisé** :  
-  Une requête POST est envoyée à une API externe avec une clé secrète, en utilisant `fetch()` et le format `application/json`.
-- 🧠 **Affichage dynamique** :  
-  Les horoscopes sont présentés sous forme de **cartes visuelles** générées dynamiquement en JavaScript.
-- ⏳ **Loader animé** :  
-  Un indicateur de chargement s'affiche pendant la récupération des données.
-- ❗ **Gestion des erreurs** :  
-  En cas de problème de communication avec l'API, un **message d'erreur clair** est affiché.
-- 📱 **Design responsive** :  
-  L'interface s'adapte parfaitement aux **mobiles**, **tablettes** et **ordinateurs**.
-- ✨ **Animations CSS** :  
-  Un effet esthétique est appliqué au survol des cartes pour une **expérience utilisateur fluide**.
+- 🎥 **Fond horoscope** : avec ambiance rétro-futuriste (`astrologie.mp4`).
+- 🟠 **Bouton interactif** :Un bouton « Tirer les 12 messages » déclenche l'affichage des horoscopes.
+- 🔐 **Appel API sécurisé** :Une requête POST est envoyée à une API externe avec une clé secrète, en utilisant `fetch()` et le format `application/json`.
+- 🧠 **Affichage dynamique** : Les horoscopes sont présentés sous forme de **cartes visuelles** générées dynamiquement en JavaScript.
+- ⏳ **Loader animé** : Un indicateur de chargement s'affiche pendant la récupération des données.
+- ❗ **Gestion des erreurs** :En cas de problème de communication avec l'API, un **message d'erreur clair** est affiché.
+- 📱 **Design responsive** :L'interface s'adapte parfaitement aux **mobiles**, **tablettes** et **ordinateurs**.
+- ✨ **Animations CSS** : Un effet esthétique est appliqué au survol des cartes pour une **expérience utilisateur fluide**.
 
 ## 🧰 Technologies utilisées
 
