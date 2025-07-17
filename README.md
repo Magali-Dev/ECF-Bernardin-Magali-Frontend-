@@ -49,6 +49,8 @@ ECF-Bernardin-Magali(Frontend)/
 ├── js/
 │   └── script.js
 ├── .gitignore
+├── .htacess
+├── desktop.ini
 ├── index.html
 ├── README.md
 ├── robots.txt
