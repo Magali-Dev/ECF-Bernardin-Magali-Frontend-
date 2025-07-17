@@ -35,7 +35,7 @@ function updateDate() {
 updateDate();
 setInterval(updateDate, 60_000);
 
-// Définition des signes astrologiques
+// signes astrologiques
 const signes = [
   { nom: "Bélier", dates: "Du 21 Mars au 19 Avril", image: "assets/images/signes/belier.jpg"},
   { nom: "Taureau", dates: "Du 20 Avril au 20 Mai", image: "./assets/images/signes/taureau.jpg"},
@@ -142,9 +142,7 @@ window.onclick = (event) => {
   }
 };
 
-
 // bouton vers le haut 
-
 const btnRetour = document.getElementById('back-to-top');
 const showAfter = 200;
 
