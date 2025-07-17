@@ -1,37 +1,42 @@
+// Majuscule à la première lettre d’une chaîne
 function capitalizeFirstLetter(str) {
   return str.charAt(0).toUpperCase() + str.slice(1);
 }
 
+// dynamiquement la date actuelle au format français
 function updateDate() {
   const now = new Date();
+
   const options = {
     weekday: 'long',
     year: 'numeric',
     month: 'long',
     day: 'numeric'
   };
+
+  // Formate la date (ex. "jeudi 17 juillet 2025")
   let formattedDate = now.toLocaleDateString('fr-FR', options);
-  
-  // Capitaliser la première lettre de chaque mot
+
+  // Majuscule à chaque mot
   formattedDate = formattedDate
     .split(' ')
     .map(word => capitalizeFirstLetter(word))
     .join(' ');
 
+  // Format des heures “HHhMM”
   const hours = now.getHours().toString().padStart(2, '0');
   const minutes = now.getMinutes().toString().padStart(2, '0');
 
+  // Affiche dans l’élément #current-date
   document.getElementById('current-date').textContent =
     `${formattedDate}, ${hours}h${minutes}`;
 }
 
+// Initialise la date et met à jour chaque minute
 updateDate();
-
 setInterval(updateDate, 60_000);
 
-
-
-
+// Définition des signes astrologiques
 const signes = [
   { nom: "Bélier", dates: "Du 21 Mars au 19 Avril", image: "assets/images/signes/belier.jpg"},
   { nom: "Taureau", dates: "Du 20 Avril au 20 Mai", image: "./assets/images/signes/taureau.jpg"},
@@ -47,13 +52,15 @@ const signes = [
   { nom: "Poissons", dates: "Du 19 Février au 20 Mars", image: "./assets/images/signes/poissons.jpg"}
 ];
 
-
 const container = document.getElementById("cards-container");
 const bouton = document.getElementById("tirer-cartes");
 const loading = document.getElementById("loading-message");
 
+// Gestion du clic sur le bouton
 bouton.addEventListener("click", () => {
   const intro = document.getElementById("intro-text");
+
+  // Si les cartes sont déjà affichées, les fermer
   if (container.style.display === "grid") {
     container.style.display = "none";
     intro.style.display = "block";
@@ -61,21 +68,27 @@ bouton.addEventListener("click", () => {
     return;
   }
 
+  // Début du chargement
   bouton.disabled = true;
   loading.style.display = "block";
   intro.style.display = "none";
-
   container.innerHTML = "";
 
   fetch("https://oracles-api.sidathsoeun.fr/oracle_api.php", {
     method: 'POST',
     headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({ api_key: "SI_DART_Sun_api_keys_!598254741369!excalibure!paramKeysOracle!887782secretNum&5882!" })
+    body: JSON.stringify({
+      api_key: "SI_DART_Sun_api_keys_!598254741369!excalibure!paramKeysOracle!887782secretNum&5882!"
+    })
   })
-  .then(r => { if (!r.ok) throw new Error(`Erreur ${r.status}`); return r.json(); })
+  .then(r => {
+    if (!r.ok) throw new Error(`Erreur ${r.status}`);
+    return r.json();
+  })
   .then(data => {
     const horoscopes = data.horoscope || {};
 
+    // Affiche après animation de chargement
     setTimeout(() => {
       loading.style.display = "none";
       container.style.display = "grid";
@@ -102,32 +115,35 @@ bouton.addEventListener("click", () => {
     }, 3500);
   })
   .catch(error => {
-    console.error("Erreur lors de la récupération des données :", error);
+    console.error("Erreur lors de la récupération des données :", error);
     loading.innerText = "❌ Impossible de charger les cartes.";
     bouton.disabled = false;
   });
 });
-// Récupération des éléments
+
+// Modal pour les mentions
 const modal = document.getElementById("modal-mentions");
 const btn = document.getElementById("open-mentions");
 const closeBtn = document.getElementsByClassName("close-btn")[0];
 
-// Ouverture du modal
-btn.onclick = function() {
+// Ouvre le modal
+btn.onclick = () => {
   modal.style.display = "block";
-}
+};
 
-// Fermeture du modal
-closeBtn.onclick = function() {
+// Ferme le modal
+closeBtn.onclick = () => {
   modal.style.display = "none";
-}
+};
 
-// Fermeture du modal si l'utilisateur clique en dehors de la fenêtre
-window.onclick = function(event) {
+// Ferme le modal si l’utilisateur clique à l’extérieur
+window.onclick = (event) => {
   if (event.target === modal) {
     modal.style.display = "none";
   }
-}
+};
+
+
 
 
 

@@ -1,13 +1,10 @@
 /* Import des fonts */
 @import url('https://fonts.googleapis.com/css2?family=Fredericka+the+Great&family=Kapakana:wght@300..400&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
-
-/* Reset & base */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-
 body {
     display: flex;
     flex-direction: column;
@@ -16,7 +13,6 @@ body {
     height: 100vh;
     position: relative;
 }
-
 /* Vidéo de fond */
 #background-video {
     position: fixed;
@@ -34,7 +30,6 @@ header {
     background-color: rgba(140, 101, 16, 0.8); /* corrigé syntaxe rgba */
     color: #e1dada;
 }
-
 .logo-container {
     display: flex;
     flex-wrap: wrap;
@@ -208,10 +203,10 @@ main {
     flex-direction: column;
     justify-content: space-between;
     width: 250px;
-    transition: transform 0.10s ease, box-shadow 0.10s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 .zodiac-card:hover {
-    transform: scale(1.03);
+    transform: scale(1.07);
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
@@ -345,8 +340,6 @@ footer {
         flex-direction: column;
         align-items: center;
         text-align: center;
-       
-        
     }
     .logo-container h1 {
         font-size: 2rem;

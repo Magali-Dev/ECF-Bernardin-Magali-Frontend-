@@ -48,6 +48,12 @@ ECF-Bernardin-Magali(Frontend)/
 │   └── astrologie.mp4
 ├── js/
 │   └── script.js
+├── maquettes/
+│   └── figma-version-mobile.png
+│   └── figma-version-desktop.png
+│   └── figma-version-mobile(3).png
+├── trello/
+│   └── trello-planning-sprint.png   
 ├── .gitignore
 ├── .htacess
 ├── desktop.ini
