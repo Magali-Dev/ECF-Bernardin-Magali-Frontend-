@@ -6,7 +6,6 @@ function capitalizeFirstLetter(str) {
 // dynamiquement la date actuelle au format français
 function updateDate() {
   const now = new Date();
-
   const options = {
     weekday: 'long',
     year: 'numeric',
